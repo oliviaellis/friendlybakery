@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#bg-img {
+  overflow: hidden;
+  height: 730px;
+}
+
+#bg-img img {
+  width: 100%;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 9em;
+  text-align: center;
+  position: absolute;
+  top: 250px;
+  left: 30%;
+  line-height: 0.8;
+  color: rgb(42, 75, 43);
+}
+
+span {
+  font-family: 'Yellowtail';
+}
+
+.container {
+  margin: 20px 0 0 0;
+  grid-gap: 0;
+  font-family: 'Yellowtail';
+}
+
+.col-sm {
+  text-align: center;
+  font-size: 3em;
+}
+
+.col-sm img {
+  width: 100%;
+}
