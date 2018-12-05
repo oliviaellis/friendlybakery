@@ -1,0 +1,8 @@
+<div id="page-bg"><img src='https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1647&q=80'></img></div>
+<div class="container page-grid">
+  <div class="row">
+    <% @pastries.each do |pastry| %>
+    <div class="col-sm"><img src="https://images.unsplash.com/photo-1520903366097-883405842889?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"></img><br><span><%= pastry.name %></span><br><%= pastry.description %></div>
+    <% end %>
+  </div>
+</div>

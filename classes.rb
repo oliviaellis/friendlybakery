@@ -1,25 +1,9 @@
-class Item
-  attr_accessor :name
-  @@all_items = []
-  @@items = {}
-  def initialize(name, description)
-    @name = name
-    @description = description
-    @@all_items << self
-    @@items[@name] = self
-  end
-
-  def self.all
-    return @@all_items
-  end
-end
-
-class Cookie < Item
+class Cookie
   attr_accessor :name, :description, :price
   @@all_cookies = []
   @@cookies = {}
   def initialize(name, description)
-    super(name, description)
+    @name = name
     @description = description
     @price = '$1.95'
     @@all_cookies << self
@@ -35,12 +19,12 @@ class Cookie < Item
   end
 end
 
-class Cake < Item
+class Cake
   attr_accessor :name, :description, :price
   @@all_cakes = []
   @@cakes = {}
   def initialize(name, description)
-    super(name, description)
+    @name = name
     @description = description
     @price = '$1.95'
     @@all_cakes << self
@@ -56,23 +40,23 @@ class Cake < Item
   end
 end
 
-class Muffin < Item
+class Pastry
   attr_accessor :name, :description, :price
-  @@all_muffins = []
-  @@muffins = {}
+  @@all_pastries = []
+  @@pastries = {}
   def initialize(name, description)
-    super(name, description)
+    @name = name
     @description = description
     @price = '$1.95'
-    @@all_muffins << self
-    @@muffins[@name] = self
+    @@all_pastries << self
+    @@pastries[@name] = self
   end
 
   def self.all
-    return @@all_muffins
+    return @@all_pastries
   end
 
   def self.find(name)
-    return @@muffins[name]
+    return @@pastries[name]
   end
 end
