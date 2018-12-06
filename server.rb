@@ -12,6 +12,7 @@ require './mailer.rb'
 @donut = Pastry.new('donuts', 'Flavors change weekly', 'https://images.unsplash.com/photo-1514517220017-8ce97a34a7b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80')
 @tart = Pastry.new('tarts', 'Filled with fresh fruit and pastry cream', 'https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80')
 @tatin = Pastry.new('pear tarte tatin', "Olivia's favorite--a French specialty", 'https://images.unsplash.com/photo-1512398050999-49576a8dac80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80')
+$all_items = Item.all
 
 get '/' do
   erb :home
@@ -37,12 +38,30 @@ get '/cookies' do
   erb :cookies
 end
 
+post '/cookie_order' do
+  recipient = params['email']
+  send_email(recipient)
+  redirect '/cookies'
+end
+
 get '/cakes' do
   @cakes = Cake.all
   erb :cakes
 end
 
+post '/cake_order' do
+  recipient = params['email']
+  send_email(recipient)
+  redirect '/cakes'
+end
+
 get '/pastries' do
   @pastries = Pastry.all
   erb :pastries
+end
+
+post '/pastry_order' do
+  recipient = params['email']
+  send_email(recipient)
+  redirect '/pastries'
 end

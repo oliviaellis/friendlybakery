@@ -1,6 +1,17 @@
 var container = document.getElementById('container');
 var nav = document.getElementById('navbar')
 var bg = document.getElementById('bg-photo-page');
+var icon = document.getElementById('icon');
+var form = document.getElementById('form');
+var req = document.getElementById('req');
+
+
+icon.addEventListener('click', emailer);
+
+function emailer() {
+  form.style.marginTop = '25px';
+  req.style.display = 'none';
+}
 
 function load_out_pages(url) {
   container.style.top = '-100%';

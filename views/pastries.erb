@@ -10,9 +10,11 @@
     <li><button onclick="load_out_pages('/cakes')">Cakes</button></li>
     <li><button onclick="load_out_pages('/pastries')">Pastries</button></li>
   </ul>
-  <form class="" action="/" method="post">
+  <input id="icon" type="image" src="envelope.png" />
+  <h3 id="req">request full catalog</h3>
+  <form id="form" action="/pastry_order" method="post">
     <input type="text" name="email" value=""></input>
-    <input type="submit" name="" value="send"></input>
+    <input id="send" type="submit" name="" value="send"></input>
   </form>
 </nav>
 <div class="container" id="container">

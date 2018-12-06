@@ -35,6 +35,14 @@ nav div h2 {
   width: 60px;
 }
 
+nav h3 {
+  color: white;
+  position: absolute;
+  right: 80px;
+  top: 30px;
+  font-size: 15px;
+}
+
 nav ul {
   list-style-type: none;
   text-align: center;
@@ -58,14 +66,19 @@ nav ul li a:hover {
 form {
   display: block;
   float: right;
-  margin-top: 30px;
-  margin-right: 50px;
+  margin-top: -30px;
+  margin-right: 20px;
+  transition-duration: 0.5s;
 }
 
 input {
   color: rgb(91, 121, 92);
   border: none;
   background-color: white;
+}
+
+input:focus {
+  outline: 0;
 }
 
 #send {
@@ -161,4 +174,14 @@ button:hover {
 #icon {
   display: block;
   float: right;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  margin-right: 20px;
+  margin-top: 15px;
+  transition: transform 0.5s;
+}
+
+#icon:hover{
+  transform: rotate(360deg);
 }

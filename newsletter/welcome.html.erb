@@ -1,1 +1,38 @@
-<h1>Blaziken sucks</h1>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      img {
+        width: 250px;
+        height: 400px;
+      }
+
+      div {
+        display: block;
+        float: left;
+      }
+
+      .wrapper {
+        margin-left: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 5em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Olivia's Bakery</h1>
+    <h2>View a sample of our items below, and visit our website at <a href="#">oliviasbakery.com</a> for our current selection.</h2>
+    <% $all_items.each do |item| %>
+    <div class="wrapper">
+      <div class="photo"><img src=<%= item.photo%>></img></div>
+      <br>
+      <div class="text"><h2><%= item.name %></h2><h3><%= item.price %></h3><p><%= item.description %></p></div>
+    </div>
+    <% end %>
+  </body>
+</html>

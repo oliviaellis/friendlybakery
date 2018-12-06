@@ -22,7 +22,7 @@ class Cookie < Item
   @@cookies = {}
   def initialize(name, description, photo)
     super(name, description, photo)
-    @price = '$1.95'
+    @price = '$2.95'
     @photo = photo
     @@all_cookies << self
     @@cookies[@name] = self
