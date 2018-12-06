@@ -1,8 +1,7 @@
-<div id="page-bg"><img src='https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1647&q=80'></img></div>
-<div class="container page-grid">
+<div class="container">
   <div class="row">
     <% @cakes.each do |cake| %>
-    <div class="col-sm"><img src="https://images.unsplash.com/photo-1520903366097-883405842889?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"></img><br><span><%= cake.name %></span><br><%= cake.description %></div>
+    <div class="col-sm-4"><img src=<%= cake.photo%>></img><br><span><%= cake.name %></span><h3><%= cake.price %></h3><p><%= cake.description %><p></div>
     <% end %>
   </div>
 </div>

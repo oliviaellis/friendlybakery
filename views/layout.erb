@@ -2,12 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>My Bakery</title>
+    <title>Olivia's Bakery</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Yellowtail" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
+    <nav id="navbar">
+      <div class="home">
+        <a href="/">O</a>
+      </div>
+      <ul>
+        <li><a href="/cookies">Cookies</a></li>
+        <li><a href="/cakes">Cakes</a></li>
+        <li><a href="/pastries">Pastries</a></li>
+      </ul>
+    </nav>
     <%= yield %>
     <footer>
       <form class="" action="/" method="post">

@@ -1,8 +1,7 @@
-<div id="page-bg"><img src='https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1647&q=80'></img></div>
-<div class="container page-grid">
+<div class="container">
   <div class="row">
     <% @cookies.each do |cookie| %>
-    <div class="col-sm"><img src="https://images.unsplash.com/photo-1520903366097-883405842889?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"></img><br><span><%= cookie.name %></span><br><%= cookie.description %></div>
+    <div class="col-sm-4"><img src=<%= cookie.photo%>></img><br><span><%= cookie.name %></span><h3><%= cookie.price %></h3><p><%= cookie.description %></p></div>
     <% end %>
   </div>
 </div>

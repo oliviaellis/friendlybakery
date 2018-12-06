@@ -1,11 +1,12 @@
 class Cookie
-  attr_accessor :name, :description, :price
+  attr_accessor :name, :description, :price, :photo
   @@all_cookies = []
   @@cookies = {}
-  def initialize(name, description)
+  def initialize(name, description, photo)
     @name = name
     @description = description
     @price = '$1.95'
+    @photo = photo
     @@all_cookies << self
     @@cookies[@name] = self
   end
@@ -20,12 +21,13 @@ class Cookie
 end
 
 class Cake
-  attr_accessor :name, :description, :price
+  attr_accessor :name, :description, :price, :photo
   @@all_cakes = []
   @@cakes = {}
-  def initialize(name, description)
+  def initialize(name, description, photo)
     @name = name
     @description = description
+    @photo = photo
     @price = '$1.95'
     @@all_cakes << self
     @@cakes[@name] = self
@@ -41,12 +43,13 @@ class Cake
 end
 
 class Pastry
-  attr_accessor :name, :description, :price
+  attr_accessor :name, :description, :price, :photo
   @@all_pastries = []
   @@pastries = {}
-  def initialize(name, description)
+  def initialize(name, description, photo)
     @name = name
     @description = description
+    @photo = photo
     @price = '$1.95'
     @@all_pastries << self
     @@pastries[@name] = self
