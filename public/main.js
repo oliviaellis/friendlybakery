@@ -1,17 +1,17 @@
 console.log('Hello');
 
-var nav = document.getElementById('navbar');
+var bg = document.getElementById('bg-photo');
 var cookies = document.getElementById('cookies');
 var cakes = document.getElementById('cakes');
 var pastries = document.getElementById('pastries');
 var blurb = document.getElementById('blurb');
-var bg = document.getElementById('bg-photo');
 
+// Timeout function to slide in the homepage elements on page load + 2s
 setTimeout( function() {
   cookies.classList.toggle('hidden');
   cakes.classList.toggle('hidden');
   pastries.classList.toggle('hidden');
-}, 2000);
+}, 900);
 
 function load_out(url) {
   cookies.style.left = '-50%';
@@ -23,7 +23,7 @@ function load_out(url) {
     cookies.classList.toggle('hidden');
     cakes.classList.toggle('hidden');
     pastries.classList.toggle('hidden');
-  }, 1000);
+  }, 800);
   setTimeout( function() {
     window.location = url;
   }, 1700);

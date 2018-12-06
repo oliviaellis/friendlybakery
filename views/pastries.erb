@@ -2,19 +2,24 @@
   <img class="d-block w-100" id="bg-photo-page" src="background.jpg"</img>
 </div>
 <nav id="navbar">
-  <div class="home">
-    <a href="/">O</a>
+  <div class="home" onclick="load_out_pages('/')">
+    <h2>O</h2>
   </div>
   <ul>
-    <li><a href="/cookies">Cookies</a></li>
-    <li><a href="/cakes">Cakes</a></li>
-    <li><a href="/pastries">Pastries</a></li>
+    <li><button onclick="load_out_pages('/cookies')">Cookies</button></li>
+    <li><button onclick="load_out_pages('/cakes')">Cakes</button></li>
+    <li><button onclick="load_out_pages('/pastries')">Pastries</button></li>
   </ul>
+  <form class="" action="/" method="post">
+    <input type="text" name="email" value=""></input>
+    <input type="submit" name="" value="send"></input>
+  </form>
 </nav>
-<div class="container">
+<div class="container" id="container">
   <div class="row">
     <% @pastries.each do |pastry| %>
     <div class="col-sm"><div class="photo-frame"><div class="photo"><img src=<%= pastry.photo%>></img></div></div><div class="text"><span><%= pastry.name %></span><h3><%= pastry.price %></h3><p><%= pastry.description %></p></div></div>
     <% end %>
   </div>
 </div>
+<script src="sub.js"></script>

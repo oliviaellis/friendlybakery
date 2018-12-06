@@ -17,12 +17,6 @@ footer {
   padding: 10px;
 }
 
-input {
-  background-color: rgb(160, 181, 161);
-  border: none;
-  color: white;
-}
-
 .hidden {
   display: none;
 }
