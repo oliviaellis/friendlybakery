@@ -1,10 +1,27 @@
-class Cookie
+class Item
+  attr_accessor :name, :description, :price, :photo
+  @@all_items = []
+  @@items = {}
+  def initialize(name, description, photo)
+    @name = name
+    @description = description
+    @price = ''
+    @photo = photo
+    @@all_items << self
+    @@items[@name] = self
+  end
+
+  def self.all
+    return @@all_items
+  end
+end
+
+class Cookie < Item
   attr_accessor :name, :description, :price, :photo
   @@all_cookies = []
   @@cookies = {}
   def initialize(name, description, photo)
-    @name = name
-    @description = description
+    super(name, description, photo)
     @price = '$1.95'
     @photo = photo
     @@all_cookies << self
@@ -20,15 +37,14 @@ class Cookie
   end
 end
 
-class Cake
+class Cake < Item
   attr_accessor :name, :description, :price, :photo
   @@all_cakes = []
   @@cakes = {}
   def initialize(name, description, photo)
-    @name = name
-    @description = description
+    super(name, description, photo)
     @photo = photo
-    @price = '$1.95'
+    @price = '$2.95 per slice/$30 whole'
     @@all_cakes << self
     @@cakes[@name] = self
   end
@@ -42,15 +58,14 @@ class Cake
   end
 end
 
-class Pastry
+class Pastry < Item
   attr_accessor :name, :description, :price, :photo
   @@all_pastries = []
   @@pastries = {}
   def initialize(name, description, photo)
-    @name = name
-    @description = description
+    super(name, description, photo)
     @photo = photo
-    @price = '$1.95'
+    @price = '$2.35'
     @@all_pastries << self
     @@pastries[@name] = self
   end

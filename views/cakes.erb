@@ -1,7 +1,20 @@
+<div id="bg">
+  <img class="d-block w-100" id="bg-photo-page" src="background.jpg"</img>
+</div>
+<nav id="navbar">
+  <div class="home">
+    <a href="/">O</a>
+  </div>
+  <ul>
+    <li><a href="/cookies">Cookies</a></li>
+    <li><a href="/cakes">Cakes</a></li>
+    <li><a href="/pastries">Pastries</a></li>
+  </ul>
+</nav>
 <div class="container">
   <div class="row">
     <% @cakes.each do |cake| %>
-    <div class="col-sm-4"><img src=<%= cake.photo%>></img><br><span><%= cake.name %></span><h3><%= cake.price %></h3><p><%= cake.description %><p></div>
+    <div class="col-sm-4"><div class="photo-frame"><div class="photo"><img src=<%= cake.photo%>></img></div></div><div class="text"><span><%= cake.name %></span><h3><%= cake.price %></h3><p><%= cake.description %><p></div></div>
     <% end %>
   </div>
 </div>
