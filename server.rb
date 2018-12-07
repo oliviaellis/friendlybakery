@@ -28,11 +28,6 @@ post '/' do
   erb :home
 end
 
-# get '/all' do
-#   @all_items = Item.all
-#   erb :all
-# end
-
 get '/cookies' do
   @cookies = Cookie.all
   erb :cookies

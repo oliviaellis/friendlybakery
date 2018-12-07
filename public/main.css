@@ -1,20 +1,9 @@
 @import "home.css";
 @import "items.css";
 
-
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-}
-
-footer {
-  height: 50px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(91, 121, 92);
-  text-align: right;
-  padding: 10px;
 }
 
 .hidden {

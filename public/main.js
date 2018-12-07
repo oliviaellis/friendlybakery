@@ -1,5 +1,3 @@
-console.log('Hello');
-
 var bg = document.getElementById('bg-photo');
 var cookies = document.getElementById('cookies');
 var cakes = document.getElementById('cakes');
@@ -13,6 +11,7 @@ setTimeout( function() {
   pastries.classList.toggle('hidden');
 }, 900);
 
+// Animation to slide out elements before next page load
 function load_out(url) {
   cookies.style.left = '-50%';
   cakes.style.left = '-50%';

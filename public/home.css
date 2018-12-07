@@ -1,5 +1,11 @@
 @import "main.css";
 
+#bg-photo {
+  opacity: 1;
+  transition: opacity 2s;
+  transition-delay: 0.5s;
+}
+
 #blurb {
   height: 100%;
   padding: 80px 60px 20px 60px;
@@ -15,6 +21,11 @@
   z-index: 1;
   transition: top 1.5s;
   transition-delay: 1s;
+}
+
+@keyframes slidedown {
+  from {top: -150%;}
+  to {top: 0;}
 }
 
 h2 {
@@ -33,11 +44,6 @@ h2 {
   font-family: 'Cormorant Garamond';
   font-size: 4em;
   color: white;
-}
-
-@keyframes slidedown {
-  from {top: -150%;}
-  to {top: 0;}
 }
 
 #cookies {
@@ -72,13 +78,13 @@ h2 {
   z-index: 0;
 }
 
-#cookies:hover, #cakes:hover, #pastries:hover {
-  background-color: rgb(91, 121, 92);
-}
-
 @keyframes slidein {
   from {left: -40%;}
   to {left: -10px;}
+}
+
+#cookies:hover, #cakes:hover, #pastries:hover {
+  background-color: rgb(91, 121, 92);
 }
 
 #grid {
@@ -92,12 +98,6 @@ h2 {
     "blurb pastries"
     "blurb .";
   height: 600px;
-  margin: 50px 50px 0 150px;
+  margin: 50px 50px 0 300px;
   padding-top: 50px;
-}
-
-#bg-photo {
-  opacity: 1;
-  transition: opacity 2s;
-  transition-delay: 0.5s;
 }

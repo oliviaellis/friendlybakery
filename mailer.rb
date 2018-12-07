@@ -1,4 +1,3 @@
-# Set up ActionMailer to generate and send bakery menu
 ActionMailer::Base.view_paths = File.dirname(__FILE__)
 ActionMailer::Base.smtp_settings = {
   address:    'smtp.gmail.com',
@@ -17,8 +16,3 @@ class Newsletter < ActionMailer::Base
       subject: "Bakery product list")
     end
   end
-
-# Change this to take in the recipient based on a form
-# And send on button click
-
-# Newsletter.welcome('oaksellis@gmail.com').deliver_now

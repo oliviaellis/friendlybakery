@@ -8,11 +8,13 @@ var req = document.getElementById('req');
 
 icon.addEventListener('click', emailer);
 
+// Displays email input
 function emailer() {
   form.style.marginTop = '25px';
   req.style.display = 'none';
 }
 
+// Animation to slide out elements from item pages
 function load_out_pages(url) {
   container.style.top = '-100%';
   navbar.style.top = '-100%';

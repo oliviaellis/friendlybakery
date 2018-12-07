@@ -1,5 +1,10 @@
 @import "main.css";
 
+#bg-photo-page {
+  opacity: 0.3;
+  transition-duration: 1s;
+}
+
 nav {
   background-color: rgb(58, 78, 58);
   width: 100%;
@@ -21,8 +26,8 @@ nav {
 nav div {
   display: block;
   float: left;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
 }
 
 nav div h2 {
@@ -36,7 +41,7 @@ nav div h2 {
 }
 
 nav h3 {
-  color: white;
+  color: rgb(91, 121, 92);
   position: absolute;
   right: 80px;
   top: 30px;
@@ -59,8 +64,15 @@ nav ul li a {
   color: white;
 }
 
-nav ul li a:hover {
-  color: whitesmoke;
+button {
+  color: white;
+  border: none;
+  background-color: rgb(58, 78, 58);
+  height: 80px;
+}
+
+button:hover {
+  background-color: rgb(91, 121, 92);
 }
 
 form {
@@ -79,6 +91,21 @@ input {
 
 input:focus {
   outline: 0;
+}
+
+#icon {
+  display: block;
+  float: right;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  margin-right: 20px;
+  margin-top: 15px;
+  transition: transform 0.5s;
+}
+
+#icon:hover{
+  transform: rotate(360deg);
 }
 
 #send {
@@ -113,10 +140,6 @@ input:focus {
   height: 100%;
 }
 
-div.photo img {
-  height: 450px;
-}
-
 #col-sm-4 {
   padding: 0;
 }
@@ -133,6 +156,18 @@ div.photo-frame {
   outline-offset: -15px;
 }
 
+div.photo {
+  height: 350px;
+  overflow: hidden;
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div.photo img {
+  height: 450px;
+}
+
 div.text {
   background-color: rgb(58, 78, 58);
   padding-top: 30px;
@@ -142,46 +177,7 @@ div.text {
   color: white;
 }
 
-div.photo {
-  height: 350px;
-  overflow: hidden;
-  width: 300px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.container h3 {
+div.text h3 {
   font-family: 'Cormorant Garamond';
   font-size: 2em;
-}
-
-#bg-photo-page {
-  opacity: 0.3;
-  transition-duration: 1s;
-}
-
-button {
-  color: white;
-  border: none;
-  background-color: rgb(58, 78, 58);
-  height: 80px;
-}
-
-button:hover {
-  background-color: rgb(91, 121, 92);
-}
-
-#icon {
-  display: block;
-  float: right;
-  height: 50px;
-  width: 50px;
-  border-radius: 25px;
-  margin-right: 20px;
-  margin-top: 15px;
-  transition: transform 0.5s;
-}
-
-#icon:hover{
-  transform: rotate(360deg);
 }
