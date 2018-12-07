@@ -13,6 +13,6 @@ class Newsletter < ActionMailer::Base
   def welcome(recipient)
     @recipient = recipient
     mail(to: recipient,
-      subject: "Bakery product list")
+      subject: "Olivia's Bakery")
     end
   end
